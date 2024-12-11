@@ -4,3 +4,4 @@ plotly
 geopandas
 numpy
 matplotlib
+micropip
