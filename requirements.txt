@@ -5,3 +5,7 @@ geopandas
 numpy
 matplotlib
 micropip
+openpyxl
+nbformat>=4.2.0
+ipython
+scikit-learn
