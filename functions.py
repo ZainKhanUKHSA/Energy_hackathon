@@ -5,7 +5,7 @@ def create_df(file):
     file_path = file
     # Import the CSV file into a DataFrame
     df = pd.read_csv(file_path)
-    if file == "demand_centres.csv":
+    if file == "data/demand_centres.csv":
         df_cleaned = df
     else:    
         # Remove rows where the 'point' column has missing data 

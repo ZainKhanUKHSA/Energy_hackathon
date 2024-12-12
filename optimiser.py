@@ -5,8 +5,8 @@ from haversine import haversine
 from functions import *
 from sklearn.preprocessing import MinMaxScaler
 
-df_demand = create_df("demand_centres.csv")
-df_brown_belt = create_df("brownfield-land.csv")
+df_demand = create_df("data/demand_centres.csv")
+df_brown_belt = create_df("data/brownfield-land.csv")
 
 df_brown_belt = df_brown_belt[0:2000]
 df_demand = df_demand[0:100]
@@ -97,13 +97,13 @@ build_df = pd.DataFrame({"Build_Location": build_locations})
 not_build_df = pd.DataFrame({"Not_Build_Location": not_build_locations})
 supply_df = pd.DataFrame(supply_data)
 
-build_df.to_csv("build_locations.csv", index=False)
-not_build_df.to_csv("not_build_locations.csv", index=False)
-supply_df.to_csv("supply_data.csv", index=False)
+build_df.to_csv("optimiser_output/build_locations.csv", index=False)
+not_build_df.to_csv("optimiser_output/not_build_locations.csv", index=False)
+supply_df.to_csv("optimiser_output/supply_data.csv", index=False)
 
 # Output status
 print("Status:", LpStatus[problem.status])
 print("Optimal Objective Value:", value(problem.objective))
-print("Build Locations saved to build_locations.csv")
-print("Not Build Locations saved to not_build_locations.csv")
-print("Supply Data saved to supply_data.csv")
+print("Build Locations saved to optimiser_output/build_locations.csv")
+print("Not Build Locations saved to optimiser_output/not_build_locations.csv")
+print("Supply Data saved to optimiser_output/supply_data.csv")

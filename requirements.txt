@@ -9,3 +9,4 @@ openpyxl
 nbformat>=4.2.0
 ipython
 scikit-learn
+pulp

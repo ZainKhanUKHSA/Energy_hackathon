@@ -6,7 +6,7 @@ def create_df(file):
     file_path = file
     # Import the CSV file into a DataFrame
     df = pd.read_csv(file_path)
-    if file == "demand_centres.csv":
+    if file == "data/demand_centres.csv":
         df_cleaned = df
     else:    
         # Remove rows where the 'point' column has missing data 
@@ -23,10 +23,10 @@ def create_df(file):
 #     "Latitude": [51.5074, 51.509, 51.483],  # Example LSOA centroids
 #     "Longitude": [-0.1278, -0.134, -1.231],
 # })
-df_demand = create_df("demand_centres.csv")
+df_demand = create_df("data/demand_centres.csv")
 
 # DataFrame: Brownfield Land
-file_path = 'brownfield-land.csv'
+file_path = 'data/brownfield-land.csv'
 # Import the CSV file into a DataFrame
 df = pd.read_csv(file_path)
 # Display the first few rows of the DataFrame to verify the data as a check
